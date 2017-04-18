@@ -1,0 +1,31 @@
+\documentclass[14pt]{article}
+\usepackage{graphicx}
+\begin{document}
+
+
+\title{CONSTRUCTION OF FINITE AUTOMATA FROM EXAMPLES.}
+
+\author{BY ARYATWIJUKA JUDITH.REG.NO. 15/U/3718/PS. ST.NO.215004216}
+\date{\today}
+
+\section{Abstract}
+The problem in this paper is guided learning of finite automata from examples. Given positive sample strings and negative sample stings, a finite automation can use to accept or reject a certain language and we want to show that many problems can be solved using any of the methods.
+\section{Introduction}
+The problem domain is restricted to be only over {0, 1}. Furthermore, since every none deterministic finite automaton, we deal only with deterministic finite automation, that is, there is at most 1-arrow and one 0-arrow from each state. Thus in this paper the terms “finite automation”, “automaton”, “machine” all mean deterministic finite automaton.
+ Given a string, if there is a transition from the initial state to any of the final states, then the string is accepted by the automation, otherwise it is neglected.
+\section{The problem}
+Given a right list (a set of positive sample strings) and a wrong list (a set of a negative sample strings), we should be able to do the following tasks;
+1)	To find automation with n states that accepts all strings in the right-list but none in the wrong-list.
+2)	To find automation that accepts all strings in the right list but none in the wrong-list
+3)	To find an automation with the fewest states (simplest machine) that accepts all strings in the right-list but none in the wrong-list.
+The first task and the third task are complete problems. The first task is known as construction of finite automata, and the third as simplification of the finite automata.
+The second task is trivial because one can easily construct a trivial machine that accepts exactly all the strings in the right-list but nothing else.
+ 
+\section{Past work}
+Feldman, Gips, Homing and Reder built a system that constructs a grammar in BNF from given examples. It takes only positive examples, and its problem domain is context-free languages.
+You can try [Feldman 69] to know how their system worked there are sample runs.
+The system first constructs a”trivial” grammar, and then simplifies it. Their system requires us to provide nicely-chosen examples, and it cannot solve from poorly organised examples.
+Bierman and Feldman then built a system that constructs a finite automaton from given examples. Although it takes only positive examples, they showed an application to the case where both positive and negative examples are given. The algorithm also requires nicely-chosen examples and they showed the method to choose the examples from a regular set “nicely” so that it always turns out the simplest machine. However if the examples are not nicely-chosen, their system hardly turns out the simplest machine.
+\section{Objectives}
+The main objective is to construct finite automata from examples that can be able to solve the tasks mentioned above regardless of the examples chosen. 
+\end{document}
